@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Take Survey| College Of Engineering Trikaripur</title>
+    <link rel="stylesheet" type = text/css href = "CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css"
+    <link rel="stylesheet" type = text/css href = "CSS/animations.css">
+    <style type="text/css">
+        table{
+            margin: 5%;
+            table-layout: auto;
+            font-family: Helvetica, sans-serif;
+            font-weight: normal;
+            font-size:20px;
+            border-collapse: collapse;
+            border: 1px solid lightgrey;
+        }
+        table tr{
+            border-bottom: 1px solid lightgrey;
+        }
+        table tr td{
+            padding: 0.75%;
+            border-right: 1px solid lightgrey;
+            color: #2a7086;
+        }
+        table tr td table{
+            border: none;
+        }
+        table tr td table tr{
+            border: none;
+        }
+        table tr td table tr td{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div class = "headerWrapper">
+    <a href="Home.html"><img class="shake" src="CETkr%20logo%20and%20text.png" align="left" ></a>
+    <div>
+        <ul id="pushRight">
+            <li><a class="shake" href="Home.html">Home</a></li>
+            <li><a class="shake" href="login.html">Login</a></li>
+            <li><a class="shake" href="Register.html">Register</a></li>
+            <li><a class="shake" href="Contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+<div class="mainContent">
+    <div class="survey-content">
+        <h1>Student Evaluation of Instruction</h1>
+        <div class="login-content">
+            <form>
+                <table>
+                    <tr> <!-- knowledge row -->
+                        <td>1. Knowledge of teacher in the subject</td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Excellent</td></tr>
+                                <tr><td>Good</td></tr>
+                                <tr><td>Fair</td></tr>
+                                <tr><td>Poor</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr> <!-- excellent row -->
+                                    <td>
+                                        <input type="radio" name="knw_sub1" id="knowledge_1_exce" class="css-checkbox" value="5" />
+                                        <label for="knowledge_1_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="knw_sub2" id="knowledge_2_exce" class="css-checkbox" value="5"/>
+                                        <label for="knowledge_2_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="knw_sub3" id="knowledge_3_exce" class="css-checkbox" value="5"/>
+                                        <label for="knowledge_3_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="knw_sub4" id="knowledge_4_exce" class="css-checkbox" value="5"/>
+                                        <label for="knowledge_4_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="knw_sub5" id="knowledge_5_exce" class="css-checkbox" value="5"/>
+                                        <label for="knowledge_5_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="knw_sub6" id="knowledge_6_exce" class="css-checkbox" value="5"/>
+                                        <label for="knowledge_6_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+                                <tr> <!-- good row -->
+                                    <td>
+                                        <input type="radio" name="knw_sub1" id="knowledge_1_good" class="css-checkbox" value="5" />
+                                        <label for="knowledge_1_good" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="knw_sub2" id="knowledge_2_good" class="css-checkbox" value="5"/>
+                                        <label for="knowledge_2_good" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr> <!-- fair row -->
+                                    <td>
+                                        <input type="radio" name="knw_sub1" id="knowledge_1_fair" class="css-checkbox" value="5" />
+                                        <label for="knowledge_1_fair" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr> <!-- poor row -->
+                                    <td>
+                                        <input type="radio" name="knw_sub1" id="knowledge_1_poor" class="css-checkbox" value="5" />
+                                        <label for="knowledge_1_poor" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2. Clarity and understandability of teacher's explanations
+                        </td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Excellent</td></tr>
+                                <tr><td>Good</td></tr>
+                                <tr><td>Fair</td></tr>
+                                <tr><td>Poor</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3. Teacher's willingness to help
+                        </td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Excellent</td></tr>
+                                <tr><td>Good</td></tr>
+                                <tr><td>Fair</td></tr>
+                                <tr><td>Poor</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4. Approximate percentage of classes not engaged by the teacher
+                        </td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Less than 10%</td></tr>
+                                <tr><td>10% - 25%</td></tr>
+                                <tr><td>More than 25%</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                                <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                            </table>
+                        </td>
+                    <tr>
+                        <td>
+                            5. Whether the teacher dictates notes only without explanation
+                        </td>
+                    <td>
+                        <table border="0">
+                            <tr><td>No</td></tr>
+                            <tr><td>Yes</td></tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table border="1">
+                            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+                        </table>
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            6.Teachers ability to organize lectures
+                        </td>
+                        <td>Excellent</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Satisfactory</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Inadequate</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            7.Speed of presentation
+                        </td>
+                        <td>Just right</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Too Fast</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Too Slow</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            8.Does the teacher encourage questioning
+                        </td>
+                        <td>Yes</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Sometimes</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>No</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            9.Behaviour of the teacher
+                        </td>
+                        <td>Pleasant</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Indifferent</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Unpleasant</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            10.Use of blackboard
+                        </td>
+                        <td>Effective</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Not Effective</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Rarerly Uses</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            11.Sincerity of the teacher
+                        </td>
+                        <td>Sincere</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Not Sincere</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Unable to judge</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            12.Norms of valuation of tests and assignments
+                        </td>
+                        <td>Too Strict</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Fair</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Too Liberal</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Careless</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            13.Regularity in valuing tests and assignments
+                        </td>
+                        <td>Quite punctual</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Not Punctual</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Does not return at all</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            14.Overall teaching effectiveness of the teacher
+                        </td>
+                        <td>Excellent</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Good</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Fair</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Poor</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
