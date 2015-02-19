@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Take Survey| College Of Engineering Trikaripur</title>
     <link rel="stylesheet" type = text/css href = "CSS/main.css">
-    <link rel="stylesheet" type="text/css" href="CSS/styles.css"
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
     <link rel="stylesheet" type = text/css href = "CSS/animations.css">
+    <script src="feedback_form.js"></script>
     <style type="text/css">
         form{
             margin-top: 10px;
@@ -15,6 +16,7 @@
         }
         table{
             margin:3%;
+            padding:3%;
             table-layout: auto;
             font-family: Helvetica, sans-serif;
             font-weight: normal;
@@ -57,7 +59,7 @@
     <div class="survey-content">
         <h1>Student Evaluation of Instruction</h1>
         <div class="login-content">
-            <form>
+            <form name = "feedback_form" onsubmit="testRadios()">
                 <table>
                     <tr> <!-- knowledge row -->
                         <td>1. Knowledge of teacher in the subject</td>
@@ -608,7 +610,8 @@
                     <tr> <!-- Lecture organize -->
                         <td>
                             6.Teachers ability to organize lectures
-                        </td><td>
+                        </td>
+                        <td>
                             <table border="0">
                                 <tr><td>Excellent</td></tr>
                                 <tr><td>Satisfactory</td></tr>
@@ -706,286 +709,839 @@
                         <td>
                             7.Speed of presentation
                         </td>
-                        <td>Just right</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Too Fast</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Too Slow</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Just Right</td></tr>
+                                <tr><td>Too Fast</td></tr>
+                                <tr><td>Too Slow</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr> <!-- justright row -->
+                                    <td>
+                                        <input type="radio" name="pre_sub1" id="pre_1_jr" class="css-checkbox" value="5" />
+                                        <label for="pre_1_jr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub2" id="pre_2_jr" class="css-checkbox" value="5"/>
+                                        <label for="pre_2_jr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub3" id="pre_3_jr" class="css-checkbox" value="5"/>
+                                        <label for="pre_3_jr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub4" id="pre_4_jr" class="css-checkbox" value="5"/>
+                                        <label for="pre_4_jr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub5" id="pre_5_jr" class="css-checkbox" value="5"/>
+                                        <label for="pre_5_jr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub6" id="pre_6_jr" class="css-checkbox" value="5"/>
+                                        <label for="pre_6_jr" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- toofast row -->
+                                    <td>
+                                        <input type="radio" name="pre_sub1" id="pre_1_tf" class="css-checkbox" value="0" />
+                                        <label for="pre_1_tf" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub2" id="pre_2_tf" class="css-checkbox" value="0"/>
+                                        <label for="pre_2_tf" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub3" id="pre_3_tf" class="css-checkbox" value="0"/>
+                                        <label for="pre_3_tf" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub4" id="pre_4_tf" class="css-checkbox" value="0"/>
+                                        <label for="pre_4_tf" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub5" id="pre_5_tf" class="css-checkbox" value="0"/>
+                                        <label for="pre_5_tf" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub6" id="pre_6_tf" class="css-checkbox" value="0"/>
+                                        <label for="pre_6_tf" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- tooslow row -->
+                                    <td>
+                                        <input type="radio" name="pre_sub1" id="pre_1_ts" class="css-checkbox" value="0" />
+                                        <label for="pre_1_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub2" id="pre_2_ts" class="css-checkbox" value="0"/>
+                                        <label for="pre_2_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub3" id="pre_3_ts" class="css-checkbox" value="0"/>
+                                        <label for="pre_3_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub4" id="pre_4_ts" class="css-checkbox" value="0"/>
+                                        <label for="pre_4_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub5" id="pre_5_ts" class="css-checkbox" value="0"/>
+                                        <label for="pre_5_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="pre_sub6" id="pre_6_ts" class="css-checkbox" value="0"/>
+                                        <label for="pre_6_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+                                </table>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>
                             8.Does the teacher encourage questioning
                         </td>
-                        <td>Yes</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Sometimes</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>No</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                        <td>
+                            <table border="0">
+                                <tr><td>Yes</td></tr>
+                                <tr><td>Sometimes</td></tr>
+                                <tr><td>No</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr> <!-- yes row -->
+                                    <td>
+                                        <input type="radio" name="enc_sub1" id="enc_1_s" class="css-checkbox" value="5" />
+                                        <label for="enc_1_s" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub2" id="enc_2_s" class="css-checkbox" value="5"/>
+                                        <label for="enc_2_s" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub3" id="enc_3_s" class="css-checkbox" value="5"/>
+                                        <label for="enc_3_s" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub4" id="enc_4_s" class="css-checkbox" value="5"/>
+                                        <label for="enc_4_s" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub5" id="enc_5_s" class="css-checkbox" value="5"/>
+                                        <label for="enc_5_s" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub6" id="enc_6_s" class="css-checkbox" value="5"/>
+                                        <label for="enc_6_s" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- sometimes row -->
+                                    <td>
+                                        <input type="radio" name="enc_sub1" id="enc_1_smt" class="css-checkbox" value="3" />
+                                        <label for="enc_1_smt" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub2" id="enc_2_smt" class="css-checkbox" value="3"/>
+                                        <label for="enc_2_smt" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub3" id="enc_3_smt" class="css-checkbox" value="3"/>
+                                        <label for="enc_3_smt" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub4" id="enc_4_smt" class="css-checkbox" value="3"/>
+                                        <label for="enc_4_smt" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub5" id="enc_5_smt" class="css-checkbox" value="3"/>
+                                        <label for="enc_5_smt" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub6" id="enc_6_smt" class="css-checkbox" value="3"/>
+                                        <label for="enc_6_smt" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- No row -->
+                                    <td>
+                                        <input type="radio" name="enc_sub1" id="enc_1_no" class="css-checkbox" value="0" />
+                                        <label for="enc_1_no" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub2" id="enc_2_no" class="css-checkbox" value="0"/>
+                                        <label for="enc_2_no" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub3" id="enc_3_no" class="css-checkbox" value="0"/>
+                                        <label for="enc_3_no" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub4" id="enc_4_no" class="css-checkbox" value="0"/>
+                                        <label for="enc_4_no" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub5" id="enc_5_no" class="css-checkbox" value="0"/>
+                                        <label for="enc_5_no" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="enc_sub6" id="enc_6_no" class="css-checkbox" value="0"/>
+                                        <label for="enc_6_no" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td></tr>
+
+
 
                     <tr>
                         <td>
                             9.Behaviour of the teacher
                         </td>
-                        <td>Pleasant</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Indifferent</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Unpleasant</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Pleasant</td></tr>
+                                <tr><td>Indifferent</td></tr>
+                                <tr><td>Unpleasant</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr> <!-- pleasant row -->
+                                    <td>
+                                        <input type="radio" name="beh_sub1" id="beh_1_pl" class="css-checkbox" value="5" />
+                                        <label for="beh_1_pl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub2" id="beh_2_pl" class="css-checkbox" value="5"/>
+                                        <label for="beh_2_pl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub3" id="beh_3_pl" class="css-checkbox" value="5"/>
+                                        <label for="beh_3_pl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub4" id="beh_4_pl" class="css-checkbox" value="5"/>
+                                        <label for="beh_4_pl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub5" id="beh_5_pl" class="css-checkbox" value="5"/>
+                                        <label for="beh_5_pl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub6" id="beh_6_pl" class="css-checkbox" value="5"/>
+                                        <label for="beh_6_pl" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- indifferent row -->
+                                    <td>
+                                        <input type="radio" name="beh_sub1" id="beh_1_id" class="css-checkbox" value="0" />
+                                        <label for="beh_1_id" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub2" id="beh_2_id" class="css-checkbox" value="0"/>
+                                        <label for="beh_2_id" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub3" id="beh_3_id" class="css-checkbox" value="0"/>
+                                        <label for="beh_3_id" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub4" id="beh_4_id" class="css-checkbox" value="0"/>
+                                        <label for="beh_4_id" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub5" id="beh_5_id" class="css-checkbox" value="0"/>
+                                        <label for="beh_5_id" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub6" id="beh_6_id" class="css-checkbox" value="0"/>
+                                        <label for="beh_6_id" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- unpleasant row -->
+                                    <td>
+                                        <input type="radio" name="beh_sub1" id="beh_1_upl" class="css-checkbox" value="0" />
+                                        <label for="beh_1_upl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub2" id="beh_2_upl" class="css-checkbox" value="0"/>
+                                        <label for="beh_2_upl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub3" id="beh_3_upl" class="css-checkbox" value="0"/>
+                                        <label for="beh_3_upl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub4" id="beh_4_upl" class="css-checkbox" value="0"/>
+                                        <label for="beh_4_upl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub5" id="beh_5_upl" class="css-checkbox" value="0"/>
+                                        <label for="beh_5_upl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="beh_sub6" id="beh_6_upl" class="css-checkbox" value="0"/>
+                                        <label for="beh_6_upl" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+
+
+
                     </tr>
 
                     <tr>
                         <td>
                             10.Use of blackboard
                         </td>
-                        <td>Effective</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Effective</td></tr>
+                                <tr><td>Not Effective</td></tr>
+                                <tr><td>Rarely Uses</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr> <!-- Effective row -->
+                                    <td>
+                                        <input type="radio" name="board_sub1" id="board_1_eff" class="css-checkbox" value="5" />
+                                        <label for="board_1_eff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub2" id="board_2_eff" class="css-checkbox" value="5"/>
+                                        <label for="board_2_eff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub3" id="board_3_eff" class="css-checkbox" value="5"/>
+                                        <label for="board_3_eff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub4" id="board_4_eff" class="css-checkbox" value="5"/>
+                                        <label for="board_4_eff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub5" id="board_5_eff" class="css-checkbox" value="5"/>
+                                        <label for="board_5_eff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub6" id="board_6_eff" class="css-checkbox" value="5"/>
+                                        <label for="board_6_eff" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- ineffective row -->
+                                    <td>
+                                        <input type="radio" name="board_sub1" id="board_1_ieff" class="css-checkbox" value="1" />
+                                        <label for="board_1_ieff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub2" id="board_2_ieff" class="css-checkbox" value="1"/>
+                                        <label for="board_2_ieff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub3" id="board_3_ieff" class="css-checkbox" value="1"/>
+                                        <label for="board_3_ieff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub4" id="board_4_ieff" class="css-checkbox" value="1"/>
+                                        <label for="board_4_ieff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub5" id="board_5_ieff" class="css-checkbox" value="1"/>
+                                        <label for="board_5_ieff" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub6" id="board_6_ieff" class="css-checkbox" value="1"/>
+                                        <label for="board_6_ieff" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- rare row -->
+                                    <td>
+                                        <input type="radio" name="board_sub1" id="board_1_rr" class="css-checkbox" value="0" />
+                                        <label for="board_1_rr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub2" id="board_2_rr" class="css-checkbox" value="0"/>
+                                        <label for="board_2_rr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub3" id="board_3_rr" class="css-checkbox" value="0"/>
+                                        <label for="board_3_rr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub4" id="board_4_rr" class="css-checkbox" value="0"/>
+                                        <label for="board_4_rr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub5" id="board_5_rr" class="css-checkbox" value="0"/>
+                                        <label for="board_5_rr" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="board_sub6" id="board_6_rr" class="css-checkbox" value="0"/>
+                                        <label for="board_6_rr" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td>Not Effective</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Rarerly Uses</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+
 
                     <tr>
                         <td>
                             11.Sincerity of the teacher
                         </td>
-                        <td>Sincere</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Not Sincere</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Unable to judge</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Sincere</td></tr>
+                                <tr><td>Not Sincere</td></tr>
+                                <tr><td>Unable to Judge</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr>
+                                <tr> <!-- Sincere row -->
+                                    <td>
+                                        <input type="radio" name="sinc_sub1" id="sinc_1_sin" class="css-checkbox" value="5" />
+                                        <label for="sinc_1_sin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub2" id="sinc_2_sin" class="css-checkbox" value="5"/>
+                                        <label for="sinc_2_sin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub3" id="sinc_3_sin" class="css-checkbox" value="5"/>
+                                        <label for="sinc_3_sin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub4" id="sinc_4_sin" class="css-checkbox" value="5"/>
+                                        <label for="sinc_4_sin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub5" id="sinc_5_sin" class="css-checkbox" value="5"/>
+                                        <label for="sinc_5_sin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub6" id="sinc_6_sin" class="css-checkbox" value="5"/>
+                                        <label for="sinc_6_sin" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- notsincere row -->
+                                    <td>
+                                        <input type="radio" name="sinc_sub1" id="sinc_1_nsin" class="css-checkbox" value="0" />
+                                        <label for="sinc_1_nsin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub2" id="sinc_2_nsin" class="css-checkbox" value="0" />
+                                        <label for="sinc_2_nsin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub3" id="sinc_3_nsin" class="css-checkbox" value="0" />
+                                        <label for="sinc_3_nsin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub4" id="sinc_4_nsin" class="css-checkbox" value="0" />
+                                        <label for="sinc_4_nsin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub5" id="sinc_5_nsin" class="css-checkbox" value="0" />
+                                        <label for="sinc_5_nsin" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub6" id="sinc_6_nsin" class="css-checkbox" value="0" />
+                                        <label for="sinc_6_nsin" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr><!-- unabletojudge row -->
+                                    <td>
+                                        <input type="radio" name="sinc_sub1" id="sinc_1_utj" class="css-checkbox" value="0" />
+                                        <label for="sinc_1_utj" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub2" id="sinc_2_utj" class="css-checkbox" value="0" />
+                                        <label for="sinc_2_utj" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub3" id="sinc_3_utj" class="css-checkbox" value="0" />
+                                        <label for="sinc_3_utj" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub4" id="sinc_4_utj" class="css-checkbox" value="0" />
+                                        <label for="sinc_4_utj" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub5" id="sinc_5_utj" class="css-checkbox" value="0" />
+                                        <label for="sinc_5_utj" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="sinc_sub6" id="sinc_6_utj" class="css-checkbox" value="0" />
+                                        <label for="sinc_6_utj" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>
                             12.Norms of valuation of tests and assignments
                         </td>
-                        <td>Too Strict</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Fair</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Too Liberal</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Careless</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Too Strict</td></tr>
+                                <tr><td>Fair</td></tr>
+                                <tr><td>Too Liberal</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr>
+                                <tr> <!-- Too Strict row -->
+                                    <td>
+                                        <input type="radio" name="norms_sub1" id="norms_1_ts" class="css-checkbox" value="0" />
+                                        <label for="norms_1_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub2" id="norms_2_ts" class="css-checkbox" value="0"/>
+                                        <label for="norms_2_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub3" id="norms_3_ts" class="css-checkbox" value="0"/>
+                                        <label for="norms_3_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub4" id="norms_4_ts" class="css-checkbox" value="0"/>
+                                        <label for="norms_4_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub5" id="norms_5_ts" class="css-checkbox" value="0"/>
+                                        <label for="norms_5_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub6" id="norms_6_ts" class="css-checkbox" value="0"/>
+                                        <label for="norms_6_ts" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- Fair row -->
+                                    <td>
+                                        <input type="radio" name="norms_sub1" id="norms_1_f" class="css-checkbox" value="5" />
+                                        <label for="norms_1_f" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub2" id="norms_2_f" class="css-checkbox" value="5" />
+                                        <label for="norms_2_f" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub3" id="norms_3_f" class="css-checkbox" value="5" />
+                                        <label for="norms_3_f" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub4" id="norms_4_f" class="css-checkbox" value="5" />
+                                        <label for="norms_4_f" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub5" id="norms_5_f" class="css-checkbox" value="5" />
+                                        <label for="norms_5_f" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub6" id="norms_6_f" class="css-checkbox" value="5" />
+                                        <label for="norms_6_f" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr><!-- Too Liberal row -->
+                                    <td>
+                                        <input type="radio" name="norms_sub1" id="norms_1_tl" class="css-checkbox" value="0" />
+                                        <label for="norms_1_tl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub2" id="norms_2_tl" class="css-checkbox" value="0" />
+                                        <label for="norms_2_tl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub3" id="norms_3_tl" class="css-checkbox" value="0" />
+                                        <label for="norms_3_tl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub4" id="norms_4_tl" class="css-checkbox" value="0" />
+                                        <label for="norms_4_tl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub5" id="norms_5_tl" class="css-checkbox" value="0" />
+                                        <label for="norms_5_tl" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="norms_sub6" id="norms_6_tl" class="css-checkbox" value="0" />
+                                        <label for="norms_6_tl" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>
                             13.Regularity in valuing tests and assignments
                         </td>
-                        <td>Quite punctual</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Not Punctual</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Does not return at all</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Quite Punctual</td></tr>
+                                <tr><td>Not Punctual</td></tr>
+                                <tr><td>Does Not return at all</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr>
+                                <tr> <!-- Quite Punctual row -->
+                                    <td>
+                                        <input type="radio" name="regu_sub1" id="regu_1_qp" class="css-checkbox" value="5" />
+                                        <label for="regu_1_qp" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub2" id="regu_2_qp" class="css-checkbox" value="5"/>
+                                        <label for="regu_2_qp" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub3" id="regu_3_qp" class="css-checkbox" value="5"/>
+                                        <label for="regu_3_qp" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub4" id="regu_4_qp" class="css-checkbox" value="5"/>
+                                        <label for="regu_4_qp" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub5" id="regu_5_qp" class="css-checkbox" value="5"/>
+                                        <label for="regu_5_qp" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub6" id="regu_6_qp" class="css-checkbox" value="5"/>
+                                        <label for="regu_6_qp" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- Not Punctual row -->
+                                    <td>
+                                        <input type="radio" name="regu_sub1" id="regu_1_np" class="css-checkbox" value="1" />
+                                        <label for="regu_1_np" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub2" id="regu_2_np" class="css-checkbox" value="1" />
+                                        <label for="regu_2_np" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub3" id="regu_3_np" class="css-checkbox" value="1" />
+                                        <label for="regu_3_np" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub4" id="regu_4_np" class="css-checkbox" value="1" />
+                                        <label for="regu_4_np" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub5" id="regu_5_np" class="css-checkbox" value="1" />
+                                        <label for="regu_5_np" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub6" id="regu_6_np" class="css-checkbox" value="1" />
+                                        <label for="regu_6_np" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr><!-- Does not return at all row -->
+                                    <td>
+                                        <input type="radio" name="regu_sub1" id="regu_1_dnra" class="css-checkbox" value="0" />
+                                        <label for="regu_1_dnra" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub2" id="regu_2_dnra" class="css-checkbox" value="0" />
+                                        <label for="regu_2_dnra" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub3" id="regu_3_dnra" class="css-checkbox" value="0" />
+                                        <label for="regu_3_dnra" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub4" id="regu_4_dnra" class="css-checkbox" value="0" />
+                                        <label for="regu_4_dnra" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub5" id="regu_5_dnra" class="css-checkbox" value="0" />
+                                        <label for="regu_5_dnra" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="regu_sub6" id="regu_6_dnra" class="css-checkbox" value="0" />
+                                        <label for="regu_6_dnra" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
                     </tr>
 
                     <tr>
                         <td>
                             14.Overall teaching effectiveness of the teacher
                         </td>
-                        <td>Excellent</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>
+                            <table border="0">
+                                <tr><td>Excellent</td></tr>
+                                <tr><td>Good</td></tr>
+                                <tr><td>Fair</td></tr>
+                                <tr><td>Poor</td></tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table border="1">
+                                <tr>
+                                <tr> <!-- Excellent row -->
+                                    <td>
+                                        <input type="radio" name="ote_sub1" id="ote_1_exce" class="css-checkbox" value="5" />
+                                        <label for="ote_1_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub2" id="ote_2_exce" class="css-checkbox" value="5"/>
+                                        <label for="ote_2_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub3" id="ote_3_exce" class="css-checkbox" value="5"/>
+                                        <label for="ote_3_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub4" id="ote_4_exce" class="css-checkbox" value="5"/>
+                                        <label for="ote_4_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub5" id="ote_5_exce" class="css-checkbox" value="5"/>
+                                        <label for="ote_5_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub6" id="ote_6_exce" class="css-checkbox" value="5"/>
+                                        <label for="ote_6_exce" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr> <!-- good row -->
+                                    <td>
+                                        <input type="radio" name="ote_sub1" id="ote_1_good" class="css-checkbox" value="3" />
+                                        <label for="ote_1_good" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub2" id="ote_2_good" class="css-checkbox" value="3" />
+                                        <label for="ote_2_good" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub3" id="ote_3_good" class="css-checkbox" value="3" />
+                                        <label for="ote_3_good" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub4" id="ote_4_good" class="css-checkbox" value="3" />
+                                        <label for="ote_4_good" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub5" id="ote_5_good" class="css-checkbox" value="3" />
+                                        <label for="ote_5_good" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub6" id="ote_6_good" class="css-checkbox" value="3" />
+                                        <label for="ote_6_good" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+                                <tr> <!-- fair row -->
+                                    <td>
+                                        <input type="radio" name="ote_sub1" id="ote_1_fair" class="css-checkbox" value="1" />
+                                        <label for="ote_1_fair" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub2" id="ote_2_fair" class="css-checkbox" value="1" />
+                                        <label for="ote_2_fair" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub3" id="ote_3_fair" class="css-checkbox" value="1" />
+                                        <label for="ote_3_fair" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub4" id="ote_4_fair" class="css-checkbox" value="1" />
+                                        <label for="ote_4_fair" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub5" id="ote_5_fair" class="css-checkbox" value="1" />
+                                        <label for="ote_5_fair" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub6" id="ote_6_fair" class="css-checkbox" value="1" />
+                                        <label for="ote_6_fair" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+
+                                <tr><!-- poor row -->
+                                    <td>
+                                        <input type="radio" name="ote_sub1" id="ote_1_poor" class="css-checkbox" value="0" />
+                                        <label for="ote_1_poor" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub2" id="ote_2_poor" class="css-checkbox" value="0" />
+                                        <label for="ote_2_poor" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub3" id="ote_3_poor" class="css-checkbox" value="0" />
+                                        <label for="ote_3_poor" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub4" id="ote_4_poor" class="css-checkbox" value="0" />
+                                        <label for="ote_4_poor" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub5" id="ote_5_poor" class="css-checkbox" value="0" />
+                                        <label for="ote_5_poor" class="css-label radGroup2"></label>
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="ote_sub6" id="ote_6_poor" class="css-checkbox" value="0" />
+                                        <label for="ote_6_poor" class="css-label radGroup2"></label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td>Good</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Fair</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Poor</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+
                 </table>
+
+                <div class = col-submit >
+                    <button class="loginbtn shake">Submit</button>
+                </div>
             </form>
         </div>
 
