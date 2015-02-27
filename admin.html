@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Admin | College Of Engineering Trikaripur</title>
+    <link rel="stylesheet" type = text/css href = "CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" type = text/css href = "CSS/animations.css">
+    <link rel="shortcut icon" href="Icons/login%20100p.png" type="image/x-icon" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            <!-- hide all div on load -->
+            $(".register-content").hide();
+            $(".update-content").hide();
+            $(".delete-content").hide();
+            $(".result-content").hide();
+
+            <!-- show one of the four div on click -->
+            $(".icon-add").click(function(){
+                $(".update-content").hide(900);
+                $(".delete-content").hide(900);
+                $(".result-content").hide(900);
+                $(".register-content").slideDown(600);
+            });
+
+            $(".icon-update").click(function(){
+                $(".register-content").hide(900);
+                $(".delete-content").hide(900);
+                $(".result-content").hide(900);
+                $(".update-content").slideDown(200);
+            });
+
+            $(".icon-delete").click(function(){
+                $(".register-content").hide(900);
+                $(".update-content").hide(900);
+                $(".result-content").hide(900);
+                $(".delete-content").slideDown();
+            });
+
+            $(".icon-result").click(function(){
+                $(".register-content").hide(900);
+                $(".update-content").hide(900);
+                $(".delete-content").hide(900);
+                $(".result-content").slideDown();
+            });
+        });
+    </script>
+</head>
+<body>
+<div class = "headerWrapper">
+    <a href="Home.html"><img class="shake" src="CETkr%20logo%20and%20text.png" align="left" ></a>
+    <div>
+        <ul id="pushRight">
+            <li><a class="shake" href="Home.html">Home</a></li>
+            <li><a class="shake" href="login.html">Login</a></li>
+            <li><a class="shake" href="Register.html">Register</a></li>
+            <li><a class="shake" href="Contact-us.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
+<div class="page-wrap">
+        <ul class="admin-nav">
+            <li><a class="icon-add">Add</a></li>
+            <li><a class="icon-update">Update</a></li>
+            <li><a class="icon-delete">Delete</a></li>
+            <li><a class="icon-result">Result</a></li>
+        </ul>
+</div>
+
+
+<!-- Add Teacher div -->
+<div class = "register-content">
+    <form>
+        <div class="col-submit">
+            <img class="cmn-t-scale" src="Icons/reg%20100p.png">
+        </div>
+        <div class="col-2">
+            <label>
+                Name
+                <input placeholder="Name of the teacher?" id="name" name="name" tabindex="1">
+            </label>
+        </div>
+        <div class="col-2">
+            <label>
+                Department
+                <select tabindex="2" id="drop-font">
+                    <option value="CE">Dept. of Civil Engineering</option>
+                    <option value="EC">Dept. of Electronics and Communication Engineering</option>
+                    <option value="EE">Dept. of Electrical and Electronics Engineering</option>
+                    <option value="CS">Dept. of Computer Science and Engineering</option>
+                    <option value="IT">Dept. of Information Technology</option>
+                    <option value="AS">Dept. of Applied Science</option>
+                    <option value="ME">Dept. of Mechanical Engineering</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="col-3">
+            <label>
+                Phone Number
+                <input placeholder="Phone number of the teacher" id="phnum" name="phnum" tabindex="3">
+            </label>
+        </div>
+        <div class="col-3">
+            <label>
+                Email
+                <input type="email" placeholder="Enter a valid e-mail?" id="email" name="email" tabindex="4">
+            </label>
+        </div>
+
+        <div class="col-3">
+            <label>
+                Skills
+                <input placeholder="List a few of your primary skills" id="skills" name="skills" tabindex="6">
+            </label>
+        </div>
+        <div class="col-4">
+            <label>
+                Years of Experience
+                <input placeholder="How many years of experience?" id="experience" name="experience" tabindex="7">
+            </label>
+        </div>
+        <div class="col-submit">
+            <button class="submitbtn shake">Submit Form</button>
+        </div>
+    </form>
+</div>
+
+<!-- Update Teacher -->
+<div class="update-content">
+    <form>
+        <div class="col-submit">
+            <img class="cmn-t-scale" src="Icons/reg%20100p.png">
+        </div>
+        <div class="col-2">
+            <label>
+                Name
+                <input placeholder="Name of the teacher?" id="name" name="name" tabindex="1">
+            </label>
+        </div>
+    </form>
+</div>
+</body>
+</html>
